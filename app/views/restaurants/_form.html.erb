@@ -1,0 +1,9 @@
+<%= simple_form_for @restaurant, :html => {:multipart => true} do |f| %>
+<%= select_tag(:category_id, options_for_select(@categories))%>
+<%= f.input :name, label: "Restaurant name" %>
+<%= f.input :address %>
+<%= f.input :phone %>
+<%= f.input :description %>
+<%= f.button :submit %>
+
+<% end %>
