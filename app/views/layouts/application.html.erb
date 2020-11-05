@@ -5,6 +5,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <script src="/assets/jquery.js" type="text/javascript"></script>
+    <script src="/assets/jquery_ujs.js" type="text/javascript"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -25,6 +27,10 @@
           <% else %>
             <li> <%= link_to "Log in", new_user_session_path %> </li>  
           <% end %>
+          <% if user_signed_in? %>
+      <li> <%= link_to "Add place", new_restaurant_path %></li>
+      <% end %>
+      
       </ul>
        
 
@@ -34,7 +40,7 @@
       <a href="#" class="dropdown-item" data-toggle="dropdown" role="button"  
       aria-expanded="false"> Categories <span class="caret"></span>
       </a>
-      <ul class="dropdown-meu" role="menu"> 
+      <ul class="dropdown-men" role="menu"> 
         <% Category.all.each do |category| %>
           <li classs="<%= 'active' if params[:category] == category.name%>">
             <%= link_to category.name, restaurants_path(category: category.name), class: "link"%>
@@ -43,9 +49,7 @@
       </ul>
     </li>
 
-      <% if user_signed_in? %>
-      <li> <%= link_to "Add place", new_restaurant_path %></li>
-      <% end %>
+      
       </ul>
       
       </div>
@@ -53,6 +57,9 @@
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+
+    <div class="container">
+     <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,5 +1,6 @@
 class RestaurantsController < ApplicationController
     before_action :find_restaurant, only:[:show, :edit, :update, :destroy]
+    before_action :authenticate_user!, only:[:new, :edit]
 
     def index
         if params[:category].blank?
@@ -16,7 +17,11 @@ class RestaurantsController < ApplicationController
     end
 
     def show
-        
+        if @restaurant.reviews.blank?
+            @average_review = 0
+        else
+            @average_review = @restaurant.reviews.average(:rating).round(2)
+        end
     end
 
     def create
@@ -55,7 +60,7 @@ class RestaurantsController < ApplicationController
     private
 
     def restaurant_params
-        params.require(:restaurant).permit(:name, :address, :phone, :description, :category_id)
+        params.require(:restaurant).permit(:name, :address, :phone, :description, :category_id, :place_pic)
     end
 
     def find_restaurant

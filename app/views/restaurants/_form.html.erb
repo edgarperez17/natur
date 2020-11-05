@@ -1,9 +1,10 @@
 <%= simple_form_for @restaurant, :html => {:multipart => true} do |f| %>
 <%= select_tag(:category_id, options_for_select(@categories))%>
+<%= f.file_field :place_pic%>
 <%= f.input :name, label: "Restaurant name" %>
 <%= f.input :address %>
 <%= f.input :phone %>
 <%= f.input :description %>
-<%= f.button :submit %>
+<%= f.button :submit, :class=> 'btn-custom2'%>
 
 <% end %>
