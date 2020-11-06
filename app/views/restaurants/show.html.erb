@@ -12,7 +12,9 @@
   <h5 class="restaurant-address"> Address: <%= @restaurant.address %> </h5>
   <h5> Category: <%= @restaurant.category.name %> </h5>
   <h2 class="avg-rating"> Average rating</h2>
-  <div class="average-review-rating" data-score="<%= @average_review %>"></div>
+  <div class="average-review-rating" class="glyphicon glyphicon-star" data-score="<%= @average_review %>">
+  
+  </div>
   <span class="number-of-reviews"> Based on <%= @restaurant.reviews.count %> Reviews </span>
   <p class="restaurant-desc"> <%= @restaurant.description %> </p>
 
@@ -56,14 +58,14 @@
    score: function() {
      return $(this).attr('data-score'); 
    },
-   path: 'app/assets/imgages/'
+   path: '/javascript/packs/'
    });
 </script>
 
 <script>
 	$('.average-review-rating').raty({
 		readOnly: true,
-		path: '/assets/',
+		path: '/javascript/packs/',
 		score: function() {
 			return $(this).attr('data-score')
 		}

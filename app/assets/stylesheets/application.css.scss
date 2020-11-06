@@ -141,7 +141,7 @@ p.notice {
     }
 }
 
-.book-links {
+.restaurant-links {
     .btn-custom {
         padding: 3px 10px;
         font-weight: 300;
@@ -150,25 +150,24 @@ p.notice {
 }
 
 
-/* Book styles */
+/* restaurant styles */
 
 .restaurant {
-    height: 250px;
-    width: 300px;
-    margin-right: 20px;
+    height: 350px;
+    width: 250px;
     margin-bottom: 40px;
     @include background-tile;
 }
 
 .restaurant-show {
-    height: 250px;
-    width: 300px;
+    height: 475px;
+    width: 325px;
     @include background-tile;
 }
 
 .restaurant-info {
     @include background-tile;
-    .restaurant-name {
+    .restaurant-title {
         margin-top: 0;
         font-size: 2em;
     }
@@ -189,7 +188,7 @@ p.notice {
             font-size: 0.80em;
         }
     }
-    .restaurant-address {
+    .restaurant-phone {
         font-size: 1.5em;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -238,7 +237,7 @@ p.notice {
 }
 
 
-/* New Book Form styles */
+/* New restaurant Form styles */
 
 .new-restaurant-form {
     @include background-tile;
@@ -254,7 +253,7 @@ p.notice {
 }
 
 
-/* Edit Book Form styles */
+/* Edit restaurant Form styles */
 
 .edit-restaurant-form {
     @include background-tile;
