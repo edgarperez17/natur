@@ -1,6 +1,6 @@
 <%= simple_form_for([@restaurant, @restaurant.reviews.build]) do |f|%>
-<div id="rating-form">
- <%= f.input :rating %>
+<div id="star-form">
+ <label> Rating </label>
 </div>
 
 
@@ -9,8 +9,8 @@
 <% end %>
 
 <script>
-	$('#rating-form').raty({
-		path: '/javascript/packs/',
+	$('#star-form').raty({
+		path: '/assets/',
 		scoreName: 'review[rating]'
 	});
 </script>

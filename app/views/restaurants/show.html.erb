@@ -53,21 +53,30 @@
 </div>
 
 <script>
-   $('.review-rating').raty({
-   readOnly: true,
-   score: function() {
-     return $(this).attr('data-score'); 
-   },
-   path: '/javascript/packs/'
-   });
+  //$('.review-rating').raty({
+   //readOnly: true,
+   //score: function() {
+   //  return $(this).attr('data-score'); 
+   //},
+   //path: './javascript/packs/'
+   //}); 
+jQuery(function() {
+    $('.review-rating').raty({
+        readOnly: true,
+        score: function() {
+            return $(this).attr('data-score');
+        },
+        path: '../assets/'
+    });
+});
 </script>
 
 <script>
 	$('.average-review-rating').raty({
 		readOnly: true,
-		path: '/javascript/packs/',
-		score: function() {
-			return $(this).attr('data-score')
-		}
-	});
+	  path: '../assets/',
+	 	score: function() {
+ 		return $(this).attr('data-score')
+ 	}
+ });
 </script>
