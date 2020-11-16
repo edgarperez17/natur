@@ -7,17 +7,11 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require("./jquery.raty")
-
-//jQuery(function() {
-//  $('.review-rating').raty({
-//    readOnly: true,
-//  score: function() {
-//    return $(this).attr('data-score');
-//},
-//path: '/assets/images/'
-//  });
-//});
+    //require('packs/custom')
+    //require('packs/posts.js')
+require("raty-js")
+require('webpack-dev-server')
+require("/packs/jquery.raty")
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -25,3 +19,13 @@ require("./jquery.raty")
 
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+//= require bootstrap-sprockets
+//= require bootstrap-sprockets
+//= require bootstrap
+//= require webpack
+
+//= require_tree .
+//= require_tree 
+
+
+//= require jquery-ui
