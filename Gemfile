@@ -11,8 +11,7 @@ gem 'paperclip', '~> 6.1'
 gem 'simple_form', '~> 5.0', '>= 5.0.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+
 #boostrap Sass
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 # Use Puma as the app server
@@ -39,6 +38,8 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3', '~> 1.4'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
